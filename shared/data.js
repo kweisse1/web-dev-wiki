@@ -4,7 +4,7 @@ import {Text, StyleSheet} from "react-native"
 //Used to generate pages
  class Page
  {
-     constructor(title, documentationLink, summary, additionalResources)
+     constructor(title, documentationLink, summary, additionalResources="additional resources listed here")
      {
         this.title= title,
         this.documentationLink= documentationLink, 
@@ -41,7 +41,16 @@ function ReactAdditionalResources(props)
 }
 
 //Page creation and add to pageObjectsArr 
-const reactPage = new Page("React","https://reactjs.org/docs/getting-started.html","React is a tool for developing responsive websites",<ReactAdditionalResources />).add()
+// possible pages? react redux, react thunk, fetch api, react router, react native navigation, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add.  
+
+
+new Page("React","https://reactjs.org/docs/getting-started.html","React is a JavaScript library released by Facebook in 2013. It is used to build UI components for single page web applications.",<ReactAdditionalResources />).add()
+
+new Page("React Native","https://reactnative.dev/docs/getting-started","React Native leverages the power of React to create mobile applications").add()
+
+new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/","Bootstrap is a CSS framework for developing responsive mobile-first websites. It was released in 2011 by Twitter.").add()
+
+new Page("Sass","https://sass-lang.com/documentation","Sass is a CSS preprocessor. It complies to CSS which can be parsed by the browser. Sass provides developers with powerful tools to make writing CSS more pleasant, such as; variables, nested rules, mixins and functions").add()
 
 
 
