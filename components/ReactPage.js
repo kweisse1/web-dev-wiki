@@ -1,9 +1,9 @@
 import React from "react"
 import { StyleSheet, Text, View } from 'react-native';
-import pagesDisplayArr from "./data.js"
+import pagesDisplayArr from "../shared/data.js"
 
 
-function Example(props)
+function ReactPage(props)
 {
   
   return(
@@ -12,4 +12,4 @@ function Example(props)
   )
 }
 
-export default Example
+export default ReactPage
