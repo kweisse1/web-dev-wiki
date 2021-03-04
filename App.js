@@ -19,5 +19,3 @@ const styles = StyleSheet.create({
   },
 });
 
-weee I like to break code
-look nothing works now
