@@ -18,3 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+weee I like to break code
+look nothing works now
