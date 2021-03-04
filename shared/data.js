@@ -43,7 +43,6 @@ function ReactAdditionalResources(props)
 //Page creation and add to pageObjectsArr 
 // possible pages? react redux, react thunk, fetch api, react router, react native navigation, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add.  
 
-
 new Page("React","https://reactjs.org/docs/getting-started.html","React is a JavaScript library released by Facebook in 2013. It is used to build UI components for single page web applications.",<ReactAdditionalResources />).add()
 
 new Page("React Native","https://reactnative.dev/docs/getting-started","React Native leverages the power of React to create mobile applications").add()
