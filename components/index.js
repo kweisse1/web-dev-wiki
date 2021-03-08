@@ -1,3 +1,5 @@
-import ReactPage from "./ReactPage.js"
+import MainComponent from "./MainComponent"
 
-export {ReactPage}
+//page used to make components easier to access.
+
+export {MainComponent}

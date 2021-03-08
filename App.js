@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {ReactPage} from "./components"
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import {MainComponent} from "./components/"
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView>
       <StatusBar style="auto" />
-      <ReactPage />
-    </View>
+      <MainComponent />
+    </ScrollView>
   );
 }
 
