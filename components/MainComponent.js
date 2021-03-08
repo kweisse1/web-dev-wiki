@@ -1,13 +1,38 @@
 
 import React from 'react';
-import { StyleSheet, ScrollView, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 import {ReactPage, ReactNativePage, SassPage, BootstrapPage, HomePage} from "./pages"
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 
+const MainNavigator = createStackNavigator(
+  {
+      HomePage: { screen: HomePage },
+      ReactPage: { screen: ReactPage}, 
+      ReactNativePage: {screen: ReactNativePage},
+      BootstrapPage: {screen: BootstrapPage}, 
+      SassPage: {screen: SassPage}
+  }, 
+  {
+      initialRouteName: 'HomePage',
+      defaultNavigationOptions: {
+          headerStyle: {
+              backgroundColor: '#5637DD'
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+              color: '#fff'
+          }
+      }
+  }
+);
+
+const AppNavigator = createAppContainer(MainNavigator);
 
 //main Component handles navigation between screens.
 function MainComponent() {
   return (
-        <ReactPage />
+        <AppNavigator />
   );
 }
 
