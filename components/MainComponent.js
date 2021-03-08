@@ -1,19 +1,13 @@
 
 import React from 'react';
-import { StyleSheet, ScrollView, Text } from 'react-native';
+import { StyleSheet, ScrollView, Text, View } from 'react-native';
 import {ReactPage, ReactNativePage, SassPage, BootstrapPage, HomePage} from "./pages"
 
 
-
-
-//main Component handles navigaton between screens.
- function MainComponent() {
+//main Component handles navigation between screens.
+function MainComponent() {
   return (
-    <ScrollView style={styles.container}>
-      <ReactPage />
-      <BootstrapPage />
-      <HomePage />
-    </ScrollView>
+        <ReactPage />
   );
 }
 

@@ -6,7 +6,7 @@ import {MainComponent} from "./components/"
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView>
       <StatusBar style="auto" />
       <MainComponent />
     </ScrollView>
