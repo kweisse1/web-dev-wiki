@@ -1,14 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {ReactPage} from "./components"
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import {ReactPage, ReactNativePage, SassPage, BootstrapPage} from "./components/pages"
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <StatusBar style="auto" />
       <ReactPage />
-    </View>
+      <ReactNativePage />
+      <SassPage />
+      <BootstrapPage />
+    </ScrollView>
   );
 }
 

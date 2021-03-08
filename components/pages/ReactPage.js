@@ -1,6 +1,6 @@
 import React from "react"
-import { StyleSheet, Text, View } from 'react-native';
-import pagesDisplayArr from "../shared/data.js"
+import {Text} from 'react-native';
+import pagesDisplayArr from "../../shared/data.js"
 
 
 function ReactPage(props)
