@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Text, FlatList} from 'react-native';
+import {FlatList} from 'react-native';
 import {ListItem} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
 
