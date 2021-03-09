@@ -1,6 +1,6 @@
 import React from "react" 
-import {Text, StyleSheet} from "react-native"
-
+import {Text, StyleSheet, Button} from "react-native"
+import * as Linking from 'expo-linking';
 //Used to generate pages
  class Page
  {
@@ -59,12 +59,9 @@ const pagesViewArr= pageObjectsArr.map(index =>
     {
         return(
             <>
-            <Text style={styles.title}>{"\n"}{"\n"}{index.title}{"\n"}{"\n"}</Text>
             <Text style={styles.title}>     Tech Summary{"\n"}{"\n"}</Text>
             <Text style={styles.main}>{`       ${index.summary}`}</Text>
-            <Text style={styles.title}>{"\n"}{"\n"}Official Documentation{"\n"}{"\n"}</Text>
-            <Text style={styles.main}>   {index.documentationLink}{"\n"}{"\n"}</Text>
-            <Text style={styles.title}>Additional Resources{"\n"}{"\n"}</Text>
+            <Text style={styles.title}>{"\n"}{"\n"}Additional Resources{"\n"}{"\n"}</Text>
             {index.additionalResources}
             </>
         )
