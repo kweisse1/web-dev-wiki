@@ -1,15 +1,26 @@
-import React from "react"
+import React, {Component} from "react"
 import {Text} from 'react-native';
 import pagesDisplayArr from "../../shared/data.js"
 
 
-function BootstrapPage(props)
+class BootstrapPage extends Component
 {
-  
-  return(
-    // Search for the page we want by title.
-    <Text>{pagesDisplayArr.filter(index => index.title==="Bootstrap")[0].view}</Text>
-  )
+  constructor(props)
+  {
+    super(props)
+  }
+
+  static navigationOptions = {
+    title: 'Bootstrap'
+  }
+
+  render()
+  {
+    return(
+      <Text>{pagesDisplayArr.filter(index => index.title==="Bootstrap")[0].view}</Text>
+    )
+  }
 }
+
 
 export default BootstrapPage

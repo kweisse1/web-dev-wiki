@@ -48,7 +48,7 @@ new Page("ReactPage","React","https://reactjs.org/docs/getting-started.html","Re
 
 new Page("ReactNativePage","React Native","https://reactnative.dev/docs/getting-started","React Native leverages the power of React to create mobile applications").add()
 
-new Page("BootStrapPage","Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/","Bootstrap is a CSS framework for developing responsive mobile-first websites. It was released in 2011 by Twitter.").add()
+new Page("BootstrapPage","Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/","Bootstrap is a CSS framework for developing responsive mobile-first websites. It was released in 2011 by Twitter.").add()
 
 new Page("SassPage","Sass","https://sass-lang.com/documentation","Sass is a CSS preprocessor. It complies to CSS which can be parsed by the browser. Sass provides developers with powerful tools to make writing CSS more pleasant, such as; variables, nested rules, mixins and functions").add()
 

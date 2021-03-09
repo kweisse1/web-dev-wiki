@@ -1,15 +1,26 @@
-import React from "react"
+import React, {Component} from "react"
 import {Text} from 'react-native';
 import pagesDisplayArr from "../../shared/data.js"
 
 
-function ReactNativePage(props)
+class ReactNativePage extends Component
 {
-  
-  return(
-    // Search for the page we want by title.
-    <Text>{pagesDisplayArr.filter(index => index.title==="React Native")[0].view}</Text>
-  )
+  constructor(props)
+  {
+    super(props)
+  }
+
+  static navigationOptions = {
+    title: 'React Native'
+  }
+
+  render()
+  {
+    return(
+      <Text>{pagesDisplayArr.filter(index => index.title==="React Native")[0].view}</Text>
+    )
+  }
 }
+
 
 export default ReactNativePage
