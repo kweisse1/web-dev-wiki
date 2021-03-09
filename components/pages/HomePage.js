@@ -11,23 +11,26 @@ class HomePage extends Component
     super(props)
   }
 
+  static navigationOptions = {
+    title: 'Web Dev Wiki'
+  }
 
   render()
   {
-
+    const {navigate}= this.props.navigation
     const renderPageSelection=({item})=>
     {
       return(
 
         <ListItem 
             title={item.title}
+            onPress={()=> navigate(item.routeName)}
         />
       )
     }
 
     return(
       <>
-      <Text>Web  Dev Wiki</Text>
       <FlatList
         data={pagesDisplayArr}
         renderItem={renderPageSelection}
