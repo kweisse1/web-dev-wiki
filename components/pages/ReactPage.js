@@ -13,11 +13,10 @@ class ReactPage extends Component
     super(props)
   }
  
-  static navigationOptions = {
-    title: pageObject.title,
-    headerRight: () => (
-      <OfficialDocsButton url={pageObject.documentationLink}/>),
-  }
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.state.params.title,
+    headerRight: navigation.state.params.docsButton
+  });
 
   render()
   {
