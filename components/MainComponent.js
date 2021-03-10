@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { StyleSheet} from 'react-native';
-import {HomePage, InfoDisplay} from "./pages"
+import {HomePage, InfoDisplay} from "./pages";
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
+import {Colors} from './styles';
 
 const MainNavigator = createStackNavigator(
   {
