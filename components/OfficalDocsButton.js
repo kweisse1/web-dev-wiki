@@ -7,10 +7,10 @@ function OfficialDocsButton (props)
 {
     return(
 
-          <Button
-        onPress={()=>Linking.openURL(props.url)}
-        title="View Official Docs"
-        color="#000"
+        <Button
+          onPress={()=>Linking.openURL(props.url)}
+          title="View Official Docs"
+          color="#000"
       />
     )
 }

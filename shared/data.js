@@ -51,8 +51,6 @@ new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduc
 
 new Page("Sass","https://sass-lang.com/documentation","Sass is a CSS preprocessor. It complies to CSS which can be parsed by the browser. Sass provides developers with powerful tools to make writing CSS more pleasant, such as; variables, nested rules, mixins and functions").add()
 
-
-
 //Defines the look of the pages NEEDS major edits
 const pagesViewArr= pageObjectsArr.map(index => 
     {
