@@ -58,10 +58,11 @@ const pagesViewArr= pageObjectsArr.map(index =>
     {
         return(
             <>
-            <Text style={styles.title}>     Tech Summary{"\n"}{"\n"}</Text>
-            <Text style={styles.main}>{`       ${index.summary}`}</Text>
-            <Text style={styles.title}>{"\n"}{"\n"}Additional Resources{"\n"}{"\n"}</Text>
-            {index.additionalResources}
+              {/* adjust universal style here */}
+              <Text style={styles.title}>     Tech Summary{"\n"}{"\n"}</Text>
+              <Text style={styles.main}>{`       ${index.summary}`}</Text>
+              <Text style={styles.title}>{"\n"}{"\n"}Additional Resources{"\n"}{"\n"}</Text>
+              {index.additionalResources}
             </>
         )
     });
