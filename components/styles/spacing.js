@@ -1,9 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export const Spacing = StyleSheet.create({
-    //button styling for OfficialDocsButton
 
-    //sidebar styling
-
-    //wiki page styling
-})
+       
+    title: {
+      fontSize: 26,
+      color: "#551A8B"
+    }, 
+  
+    main:{
+      fontSize: 18,
+    }
+  });

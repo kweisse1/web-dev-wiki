@@ -4,7 +4,7 @@ import { StyleSheet} from 'react-native';
 import {HomePage, InfoDisplay} from "./pages";
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import {Colors} from './styles';
+import {Colors, Typography, Spacing} from './styles';
 
 const MainNavigator = createStackNavigator(
   {

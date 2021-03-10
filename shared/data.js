@@ -1,6 +1,7 @@
 import React from "react" 
 import {Text, StyleSheet, Button} from "react-native"
 import * as Linking from 'expo-linking';
+import {Spacing } from './styles';
 //Used to generate pages
  class Page
  {
@@ -19,25 +20,12 @@ import * as Linking from 'expo-linking';
      } 
  }
 
-//Define styles
- const styles = StyleSheet.create({
-       
-  title: {
-    fontSize: 26,
-    color: "#551A8B"
-  }, 
-
-  main:{
-    fontSize: 18,
-  }
-});
-
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
 function ReactAdditionalResources(props)
 {
-  return(<Text style={styles.main}> {"google.com"}</Text>)
+  return(<Text style={Spacing.main}> {"google.com"}</Text>)
 }
 
 //Page creation and add to pageObjectsArr 
@@ -57,9 +45,9 @@ const pagesViewArr= pageObjectsArr.map(index =>
         return(
             <>
               {/* adjust universal style here */}
-              <Text style={styles.title}>     Tech Summary{"\n"}{"\n"}</Text>
-              <Text style={styles.main}>{`       ${index.summary}`}</Text>
-              <Text style={styles.title}>{"\n"}{"\n"}Additional Resources{"\n"}{"\n"}</Text>
+              <Text style={Spacing.title}>     Tech Summary{"\n"}{"\n"}</Text>
+              <Text style={Spacing.main}>{`       ${index.summary}`}</Text>
+              <Text style={Spacing.title}>{"\n"}{"\n"}Additional Resources{"\n"}{"\n"}</Text>
               {index.additionalResources}
             </>
         )
