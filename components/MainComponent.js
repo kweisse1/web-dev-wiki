@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { StyleSheet} from 'react-native';
-import {ReactPage, ReactNativePage, SassPage, BootstrapPage, HomePage} from "./pages"
+import {ReactPage, ReactNativePage, SassPage, BootstrapPage, HomePage, InfoDisplay} from "./pages"
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
@@ -11,7 +11,8 @@ const MainNavigator = createStackNavigator(
       ReactPage: { screen: ReactPage}, 
       ReactNativePage: {screen: ReactNativePage},
       BootstrapPage: {screen: BootstrapPage}, 
-      SassPage: {screen: SassPage}
+      SassPage: {screen: SassPage}, 
+      InfoDisplayPage: {screen: InfoDisplay}
   }, 
   {
       initialRouteName: 'HomePage',

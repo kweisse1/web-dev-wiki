@@ -25,7 +25,7 @@ class HomePage extends Component
 
         <ListItem 
             title={item.title}
-            onPress={()=> navigate(item.routeName,{
+            onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
                 <OfficialDocsButton url={item.documentationLink}/>)

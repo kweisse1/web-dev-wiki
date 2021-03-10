@@ -1,8 +1,8 @@
 import React, {Component} from "react"
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import pagesDisplayArr from "../../shared/data.js"
 
-class ReactPage extends Component
+class InfoDisplay extends Component
 {
   constructor(props)
   {
@@ -20,9 +20,9 @@ class ReactPage extends Component
   render()
   {
     return(
-      <View>{this.state.pageObject.view}</View>
+      <View><Text>{this.state.pageObject.view}</Text></View>
     )
   }
 }
 
-export default ReactPage
+export default InfoDisplay
