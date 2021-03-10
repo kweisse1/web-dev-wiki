@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import {FlatList} from 'react-native';
 import {ListItem} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
+import {OfficialDocsButton} from "../index"
 
 
 class HomePage extends Component
@@ -24,7 +25,11 @@ class HomePage extends Component
 
         <ListItem 
             title={item.title}
-            onPress={()=> navigate(item.routeName)}
+            onPress={()=> navigate("InfoDisplayPage",{
+              title: item.title, 
+              docsButton: ()=> (
+                <OfficialDocsButton url={item.documentationLink}/>)
+            })}
         />
       )
     }
