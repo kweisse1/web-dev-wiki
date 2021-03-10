@@ -13,14 +13,14 @@ const pallete = {
 export const Colors = StyleSheet.create({
     defaultNavigationOptions: {
         headerStyle: {
-            backgroundColor: blue
+            backgroundColor: pallete.blue
         },
-        headerTintColor: white,
+        headerTintColor: pallete.white,
         headerTitleStyle: {
-            color: white
+            color: pallete.white
         }
     },
     container: {
-        backgroundColor: white
+        backgroundColor: pallete.white
     }
 })

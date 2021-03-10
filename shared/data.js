@@ -1,7 +1,7 @@
 import React from "react" 
 import {Text, StyleSheet, Button} from "react-native"
 import * as Linking from 'expo-linking';
-import {Spacing } from './styles';
+import {Spacing } from '../components/styles';
 //Used to generate pages
  class Page
  {
