@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {FlatList} from 'react-native';
+import {FlatList, TextInput} from 'react-native';
 import {ListItem} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
 import {OfficialDocsButton} from "../index"
@@ -10,6 +10,24 @@ class HomePage extends Component
   constructor(props)
   {
     super(props)
+    this.state={
+      searchTerms: ""
+    }
+    this.handleInputChange= this.handleInputChange.bind(this)
+    this.handleInputChange= this.handleInputChange.bind(this)
+  }
+
+  //keeps track of form input
+  handleInputChange = (text) =>
+  {
+    this.setState({searchTerms: text})
+  }
+
+  //uses form input to filter results, display only values that the user searches for
+  filterResults()
+  {
+    const filteredArr= pagesDisplayArr.filter(index => index.title.toLowerCase().includes(this.state.searchTerms.toLowerCase()))
+    return filteredArr
   }
 
   static navigationOptions = {
@@ -33,11 +51,16 @@ class HomePage extends Component
         />
       )
     }
-
+   
     return(
       <>
+      <TextInput
+       style={{ height: 40, borderColor: 'purple', borderWidth: 1 }}
+       placeholder="Search the Wiki..."
+       onChangeText= {this.handleInputChange}
+       />
       <FlatList
-        data={pagesDisplayArr}
+        data={this.filterResults()}
         renderItem={renderPageSelection}
         keyExtractor={item => item.title}
       />
