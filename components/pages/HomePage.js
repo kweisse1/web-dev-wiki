@@ -11,21 +11,22 @@ class HomePage extends Component
   {
     super(props)
     this.state={
-      articlesShown: pagesDisplayArr,
       searchTerms: ""
     }
     this.handleInputChange= this.handleInputChange.bind(this)
     this.handleInputChange= this.handleInputChange.bind(this)
   }
 
+  //keeps track of form input
   handleInputChange = (text) =>
   {
     this.setState({searchTerms: text})
   }
 
+  //uses form input to filter results, display only values that the user searches for
   filterResults()
   {
-    const filteredArr= pagesDisplayArr.filter(index => index.title.includes(this.state.searchTerms))
+    const filteredArr= pagesDisplayArr.filter(index => index.title.toLowerCase().includes(this.state.searchTerms.toLowerCase()))
     return filteredArr
   }
 
@@ -50,12 +51,11 @@ class HomePage extends Component
         />
       )
     }
-    console.log(this.state.searchTerms)
-    console.log(this.state.articlesShown.filter(index => index.title.includes("o")))
+   
     return(
       <>
       <TextInput
-       style={{ height: 40, width:350, borderColor: 'gray', borderWidth: 1 }}
+       style={{ height: 40, borderColor: 'purple', borderWidth: 1 }}
        placeholder="Search the Wiki..."
        onChangeText= {this.handleInputChange}
        />
