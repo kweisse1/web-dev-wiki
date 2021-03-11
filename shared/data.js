@@ -78,4 +78,7 @@ for (let x=0; x<pageObjectsArr.length; x++)
   pageDisplayArr[x].view= pagesViewArr[x]
 }
 
+//alphabetize pageDisplayArr by title
+pageDisplayArr.sort((a, b) => (a.title > b.title) ? 1 : -1)
+
 export default pageDisplayArr;
