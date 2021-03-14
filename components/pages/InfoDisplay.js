@@ -8,11 +8,9 @@ class InfoDisplay extends Component
   constructor(props)
   {
     super(props)
-    this.state={
-      pageObject: pagesDisplayArr.filter(index => index.title===this.props.navigation.state.params.title)[0]
-    }
   }
- 
+    
+
   // sets stack navigator header details, these params are defined and passed in through the homepage component.
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.title,
@@ -23,7 +21,7 @@ class InfoDisplay extends Component
   {
     return(
       // The look and content of the page is defined in shared/data.js
-      <View><Text>{this.state.pageObject.view}</Text></View>
+      <View><Text>{pagesDisplayArr.filter(index => index.title===this.props.navigation.state.params.title)[0].view}</Text></View>
     )
   }
 }

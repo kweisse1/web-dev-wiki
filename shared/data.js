@@ -1,6 +1,7 @@
 import React from "react" 
-import {Text, StyleSheet, Button} from "react-native"
-import * as Linking from 'expo-linking';
+import {Text, StyleSheet} from "react-native"
+import {InternalLink} from "../components"
+
 //Used to generate pages
  class Page
  {
@@ -35,9 +36,11 @@ import * as Linking from 'expo-linking';
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
+//an example of how to use components in the array
 function ReactAdditionalResources(props)
 {
-  return(<Text style={styles.main}> {"google.com"}</Text>)
+  return(<InternalLink techName="Bootstrap"
+  />)
 }
 
 //Page creation and add to pageObjectsArr 
