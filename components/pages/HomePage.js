@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import {FlatList} from 'react-native';
 import {ListItem, SearchBar} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
-import {OfficialDocsButton} from "../index"
+import {ExternalLink} from "../index"
 
 
 
@@ -47,7 +47,7 @@ class HomePage extends Component
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
-                <OfficialDocsButton url={item.documentationLink}/>)
+                <ExternalLink url={item.documentationLink} resourceName="View Official Docs" type="button"/>)
             })}
         />
       )
