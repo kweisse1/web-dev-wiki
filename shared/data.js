@@ -1,6 +1,6 @@
 import React from "react" 
 import {Text, StyleSheet} from "react-native"
-import {InternalLink} from "../components"
+import {InternalLink, ExternalLink} from "../components"
 
 //Used to generate pages
  class Page
@@ -36,11 +36,14 @@ import {InternalLink} from "../components"
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
-//an example of how to use components in the array
+//an example of how to use components in the array remove this for when releasing.
 function ReactAdditionalResources(props)
 {
-  return(<InternalLink techName="Bootstrap"
-  />)
+  return(
+  <>
+  <InternalLink techName="React Native" type="button"/>
+  <ExternalLink resourceName="GitHub Link" url="https://github.com/kweisse1/web-dev-wiki" type="button"/>
+  </>)
 }
 
 //Page creation and add to pageObjectsArr 

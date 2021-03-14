@@ -1,6 +1,5 @@
 import MainComponent from "./MainComponent"
-import OfficialDocsButton from "./OfficalDocsButton"
 import InternalLink from "./InternalLink"
-
+import ExternalLink from "./ExternalLink"
 //page used to make components easier to access.
-export {MainComponent, OfficialDocsButton, InternalLink}
+export {MainComponent, InternalLink, ExternalLink}
