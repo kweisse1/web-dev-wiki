@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { StyleSheet} from 'react-native';
 import {HomePage, InfoDisplay} from "./pages"
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -32,12 +31,5 @@ function MainComponent() {
         <AppNavigator />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
 
 export default MainComponent
