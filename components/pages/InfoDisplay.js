@@ -21,7 +21,7 @@ class InfoDisplay extends Component
   {
     return(
       // The look and content of the page is defined in shared/data.js
-      <View><Text>{pagesDisplayArr.filter(index => index.title===this.props.navigation.state.params.title)[0].view}</Text></View>
+      pagesDisplayArr.filter(index => index.title===this.props.navigation.state.params.title)[0].view
     )
   }
 }
