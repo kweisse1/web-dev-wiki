@@ -72,7 +72,7 @@ const pagesViewArr= pageObjectsArr.map(index =>
         return(
             <>
               {/* adjust universal style here */}
-              <ScrollView>
+              <ScrollView style={{backgroundColor: "#CFCFCF"}}>
               <Card title="Tech Summary" titleStyle={styles.title}>
                {index.summary}
               </Card>
