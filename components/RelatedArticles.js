@@ -2,6 +2,7 @@ import React from "react"
 import {InternalLink} from "../components/"
 import {FlatList, View} from "react-native"
 
+// generates a list of internal links based on the related articles parameter of the instance of the page class.
 function RelatedArticles(props)
 {
   const renderLinks= ({item}) =>

@@ -5,6 +5,7 @@ import {Card} from "react-native-elements"
 
 //import from index acting goofy
 import RelatedArticles from "../components/RelatedArticles"
+import AdditionalResources from "../components/AdditionalResources"
 //Used to generate pages
  class Page
  {
@@ -54,7 +55,7 @@ const pageObjectsArr=[];
 //Page creation and add to pageObjectsArr 
 // possible pages?  react thunk, fetch api, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add. react animated  
 
-new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/",<BootstrapTechSummary />, ["React", "Bootstrap", "Sass", "React","Github"] ).add()
+new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/",<BootstrapTechSummary />, ["React"], [{resourceName: "google", url: "https://www.google.com/"}, {resourceName: "Yahoo", url: "https://www.yahoo.com/"}] ).add()
 
 new Page("React","https://reactjs.org/docs/getting-started.html", <ReactTechSummary />,["Sass", "React Router"]).add()
 
@@ -88,7 +89,7 @@ const pagesViewArr= pageObjectsArr.map(index =>
               
               {index.additionalResources?
               <Card title="Additional Resources" titleStyle={styles.title}>
-              {index.additionalResources}
+              <AdditionalResources resourceList={index.additionalResources} />
               </Card> : <></>}
 
               </ScrollView>
