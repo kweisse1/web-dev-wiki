@@ -1,16 +1,20 @@
 import React from "react" 
 import {StyleSheet, ScrollView} from "react-native"
-import {InternalLink, ExternalLink} from "../components"
 import {ReactTechSummary, ReactReduxTechSummary, BootstrapTechSummary, ReactNativeTechSummary, ReactNavigationTechSummary, ReactRouterTechSummary, SassTechSummary, GitHubTechSummary} from "../components/techSummaries/"
 import {Card} from "react-native-elements"
+
+//import from index acting goofy
+import RelatedArticles from "../components/RelatedArticles"
+import AdditionalResources from "../components/AdditionalResources"
 //Used to generate pages
  class Page
  {
-     constructor(title, documentationLink, summary, additionalResources)
+     constructor(title, documentationLink, summary, relatedArticles, additionalResources)
      {
         this.title= title,
         this.documentationLink= documentationLink, 
         this.summary= summary, 
+        this.relatedArticles= relatedArticles,
         this.additionalResources= additionalResources 
      }
 
@@ -37,22 +41,12 @@ import {Card} from "react-native-elements"
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
-//an example of how to use components in the array remove this for when releasing.
-function ReactAdditionalResources(props)
-{
-  return(
-  <>
-  <InternalLink techName="React Native" type="button"/>
-  <ExternalLink resourceName="GitHub Link" url="https://github.com/kweisse1/web-dev-wiki" type="button"/>
-  </>)
-}
-
 //Page creation and add to pageObjectsArr 
 // possible pages?  react thunk, fetch api, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add. react animated  
 
-new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/",<BootstrapTechSummary />).add()
+new Page("Bootstrap","https://getbootstrap.com/docs/5.0/getting-started/introduction/",<BootstrapTechSummary />, ["React"], [{resourceName: "google", url: "https://www.google.com/"}, {resourceName: "Yahoo", url: "https://www.yahoo.com/"}] ).add()
 
-new Page("React","https://reactjs.org/docs/getting-started.html", <ReactTechSummary />,<ReactAdditionalResources />).add()
+new Page("React","https://reactjs.org/docs/getting-started.html", <ReactTechSummary />,["Sass", "React Router"]).add()
 
 new Page("React Native","https://reactnative.dev/docs/getting-started",<ReactNativeTechSummary />).add()
 
@@ -77,9 +71,16 @@ const pagesViewArr= pageObjectsArr.map(index =>
                {index.summary}
               </Card>
               
+              {index.relatedArticles?
+              <Card title="Related Wiki Articles" titleStyle={styles.title}>
+              <RelatedArticles articleNames={index.relatedArticles}/>
+              </Card> : <></> }
+              
+              {index.additionalResources?
               <Card title="Additional Resources" titleStyle={styles.title}>
-              {index.additionalResources}
-              </Card>
+              <AdditionalResources resourceList={index.additionalResources} />
+              </Card> : <></>}
+
               </ScrollView>
             </>
         )
