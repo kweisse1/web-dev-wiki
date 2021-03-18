@@ -18,7 +18,7 @@ class InternalLink extends Component
     return (
       <Button
         //this color prop determines the color of the button that links to the next page
-        color="#5637DD"
+        color={this.props.color? this.props.color :"#5637DD"}
         title={selectedTech.title}
         onPress={()=> navigate("InfoDisplayPage",{
             title: selectedTech.title, 

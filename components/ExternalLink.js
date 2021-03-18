@@ -11,7 +11,7 @@ function ExternalLink (props)
         <Button
         onPress={()=>Linking.openURL(props.url)}
         title={props.resourceName}
-        color="#000"
+        color={props.color? props.color :"#000"}
       />
     )
     }

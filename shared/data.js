@@ -41,17 +41,6 @@ import AdditionalResources from "../components/AdditionalResources"
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
-//an example of how to use components in the array remove this for when releasing.
-// function RelatedArticles(props)
-// {
-//   return(
-//   <>
-//   <InternalLink techName={props.articleName[0]} type="button"/>
-//   <InternalLink techName={props.articleName[1]} type="button"/>
-//   <ExternalLink resourceName="GitHub Link" url="https://github.com/kweisse1/web-dev-wiki" type="button"/>
-//   </>)
-// }
-
 //Page creation and add to pageObjectsArr 
 // possible pages?  react thunk, fetch api, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add. react animated  
 
