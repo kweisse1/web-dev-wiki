@@ -9,7 +9,7 @@ function AdditionalResources(props)
   {
     return(
       <View style={{marginVertical: 10, marginHorizontal: 5}}>
-      <ExternalLink  resourceName={item.resourceName} url={item.url} type="button"/>
+      <ExternalLink  resourceName={item.resourceName} url={item.url} type="button" buttonStyle={{backgroundColor: "#464646"}}/>
       </View>
     )
   }

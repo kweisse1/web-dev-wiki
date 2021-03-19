@@ -47,7 +47,7 @@ class HomePage extends Component
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
-                <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button"/>)
+                <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button" buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
             })}
         />
       )

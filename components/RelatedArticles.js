@@ -9,7 +9,7 @@ function RelatedArticles(props)
   {
     return(
       <View style={{marginVertical: 10, marginHorizontal: 5}}>
-      <InternalLink techName={item} type="button"/>
+      <InternalLink techName={item} type="button" buttonStyle={{backgroundColor: "#5637DD"}}/>
       </View>
     )
   }
