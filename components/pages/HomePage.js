@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {FlatList} from 'react-native';
-import {ListItem, SearchBar} from 'react-native-elements'
+import {ListItem, SearchBar, Avatar} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
 import {ExternalLink} from "../index"
 
@@ -40,17 +40,22 @@ class HomePage extends Component
     const {navigate}= this.props.navigation
     const renderPageSelection=({item})=>
     {
+      const iconData={color: "#5637DD", marginRight:0, size: 38, rounded: false}
+      iconData.name= item.iconInfo.name 
+      iconData.type= item.iconInfo.type
       return(
-
         <ListItem 
             title={item.title}
-            titleStyle={{fontSize: 18}}
+            titleStyle={{fontSize: 20, marginLeft:0}}
+            leftAvatar={{icon:iconData}}
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
                 <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button" buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
             })}
-        />
+        >
+          <Avatar rounded icon={{ name: 'home' }} />
+        </ListItem>
       )
     }
    
