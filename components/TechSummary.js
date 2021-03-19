@@ -2,7 +2,7 @@ import React from "react"
 import {FlatList, View, Text} from "react-native"
 
 
-//Generates a list  of external links based on the additional resource parameter on the instance of the page class.
+//generates info based on the array passed in as a content prop this can be edited to take in an array of objects to include images as well but has not yet been implemented.
 function TechSummary(props)
 {
   const renderArticle= ({item}) =>
