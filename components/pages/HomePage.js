@@ -44,6 +44,7 @@ class HomePage extends Component
 
         <ListItem 
             title={item.title}
+            titleStyle={{fontSize: 18}}
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
