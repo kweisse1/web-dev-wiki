@@ -50,7 +50,7 @@ new Page("Bootstrap",
 "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
 ["Bootstrap is a CSS framework for developing responsive mobile-first websites. It was released in 2011 by Twitter. While Bootstrap does provide developers with some useful components such as navbars, buttons, cards and carousels, its main claim to fame is its responsive grid system. Bootstrap uses CSS classes to make a websites layout responsive to the size of the viewport."], 
 ["CSS"], 
-[{resourceName: "google", url: "https://www.google.com/", iconName:"users", iconType:"font-awesome"}],
+[{resourceName: "google", url: "https://www.google.com/"}],
 {name:"bootstrap", type:"font-awesome-5"} ).add()
 
 new Page("React","https://reactjs.org/docs/getting-started.html", ["React is a JavaScript library released by Facebook in 2013. It is used to build UI components for single page web applications. Sites built using a library like React are far more flexible and interactive then those built with HTML.","React focuses on using customizable, reusable components rather than static pages. Instead of direct DOM manipulation, React utilizes a virtual DOM. React compares the DOM to the virtual DOM and makes any adjustments necessary, this can lead to performance gains over traditional DOM manipulation. React offers improvements not only at runtime; development is faster as well."],["HTML", "React Router", "React Native", "React Redux"],undefined, {name: "react", type:"fontisto"}).add()
