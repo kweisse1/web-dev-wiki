@@ -3,7 +3,7 @@ import {Text } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import pageDisplayArr from "../shared/data.js"
 import {ExternalLink} from "./index"
-import {Button} from "react-native-elements"
+import {Button, Icon} from "react-native-elements"
 
 //Internal link component takes in three props, techName, buttonStyle and type, only techName is required, if the prop type="button" is provided the link will be in a button instead of as text. If the prop type is button it can be styled with the buttonStyle prop.The techName prop tells the stackNavigator which wiki article to link to by article title.
 class InternalLink extends Component 
@@ -20,10 +20,11 @@ class InternalLink extends Component
       <Button
         buttonStyle={this.props.buttonStyle? this.props.buttonStyle : ""}
         title={selectedTech.title}
+        icon={<Icon name={selectedTech.iconInfo.name} type={selectedTech.iconInfo.type} color="#fff" size={20} marginRight={5} />}
         onPress={()=> navigate("InfoDisplayPage",{
             title: selectedTech.title, 
             docsButton: ()=> (
-              <ExternalLink type="button" resourceName="View Docs" url={selectedTech.documentationLink} buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
+              <ExternalLink  icon={<Icon name="file-text" type="font-awesome" color="#fff" size={20} marginRight={5}/>} type="button" resourceName="View Docs" url={selectedTech.documentationLink} buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
           })}
       />
     )
@@ -34,7 +35,7 @@ class InternalLink extends Component
           onPress={()=> navigate("InfoDisplayPage",{
             title: selectedTech.title, 
             docsButton: ()=> (
-              <ExternalLink type="button" resourceName="View Docs" url={selectedTech.documentationLink}/>)
+              <ExternalLink icon={<Icon name="file-text" type="font-awesome" color="#fff" size={20} marginRight={5}/>}  type="button" resourceName="View Docs" url={selectedTech.documentationLink}/>)
           })}>{selectedTech.title}</Text>
     )
   }
