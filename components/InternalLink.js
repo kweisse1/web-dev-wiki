@@ -24,7 +24,7 @@ class InternalLink extends Component
         onPress={()=> navigate("InfoDisplayPage",{
             title: selectedTech.title, 
             docsButton: ()=> (
-              <ExternalLink type="button" resourceName="View Docs" url={selectedTech.documentationLink} buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
+              <ExternalLink  icon={<Icon name="file-text" type="font-awesome" color="#fff" size={20} marginRight={5}/>} type="button" resourceName="View Docs" url={selectedTech.documentationLink} buttonStyle={{backgroundColor: "#464646", marginRight: 20}}/>)
           })}
       />
     )
@@ -35,7 +35,7 @@ class InternalLink extends Component
           onPress={()=> navigate("InfoDisplayPage",{
             title: selectedTech.title, 
             docsButton: ()=> (
-              <ExternalLink type="button" resourceName="View Docs" url={selectedTech.documentationLink}/>)
+              <ExternalLink icon={<Icon name="file-text" type="font-awesome" color="#fff" size={20} marginRight={5}/>}  type="button" resourceName="View Docs" url={selectedTech.documentationLink}/>)
           })}>{selectedTech.title}</Text>
     )
   }
