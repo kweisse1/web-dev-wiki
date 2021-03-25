@@ -1,6 +1,7 @@
 import React from "react"
 import {InternalLink} from "../components/"
 import {FlatList, View} from "react-native"
+import styles from "../shared/styles"
 
 // generates a list of internal links based on the related articles parameter of the instance of the page class.
 function RelatedArticles(props)
@@ -9,7 +10,7 @@ function RelatedArticles(props)
   {
     return(
       <View style={{marginVertical: 10, marginHorizontal: 5}}>
-      <InternalLink techName={item} type="button" buttonStyle={{backgroundColor: "#5637DD"}}/>
+      <InternalLink techName={item} type="button" buttonStyle={{backgroundColor: styles.nav.backgroundColor}}/>
       </View>
     )
   }

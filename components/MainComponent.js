@@ -3,6 +3,7 @@ import React from 'react';
 import {HomePage, InfoDisplay} from "./pages"
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
+import styles from "../shared/styles"
 
 const MainNavigator = createStackNavigator(
   {
@@ -13,11 +14,11 @@ const MainNavigator = createStackNavigator(
       initialRouteName: 'HomePage',
       defaultNavigationOptions: {
           headerStyle: {
-              backgroundColor: '#5637DD'
+              backgroundColor: styles.nav.backgroundColor
           },
-          headerTintColor: '#fff',
+          headerTintColor: styles.nav.color,
           headerTitleStyle: {
-              color: '#fff'
+              color: styles.nav.color
           }
       }
   }
