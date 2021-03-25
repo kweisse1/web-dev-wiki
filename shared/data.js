@@ -1,7 +1,7 @@
 import React from "react" 
 import {StyleSheet, ScrollView} from "react-native"
 import {Card} from "react-native-elements"
-import * as Animatable from "react-native-animatable"
+import styles from "./styles"
 
 //import from index acting goofy
 import RelatedArticles from "../components/RelatedArticles"
@@ -27,24 +27,11 @@ import TechSummary from "../components/TechSummary"
      } 
  }
 
-//Define styles
- const styles = StyleSheet.create({
-       
-  title: {
-    fontSize: 26,
-    color: "#5637DD"
-  }, 
-
-  main:{
-    fontSize: 18,
-  }
-});
-
 //Page Info Gets stored here
 const pageObjectsArr=[];
 
 //Page creation and add to pageObjectsArr 
-// possible pages?  react thunk, fetch api, reactstrap, html5, css3, javascript, mongo db, express, node js, git/github, vscode, anything else you want to add. react animated  
+// possible pages?  react thunk, fetch api, reactstrap, javascript, mongo db, express, node js, anything else you want to add. react animated  
 
 // page title/url/summary array split by paragraph/internal links arr/external link objects arr.
 new Page("Bootstrap",
@@ -134,7 +121,7 @@ const pagesViewArr= pageObjectsArr.map(index =>
         return(
             <>
               {/* adjust universal style here */}
-              <ScrollView style={{backgroundColor: "#CFCFCF"}}>
+              <ScrollView style={{backgroundColor: styles.infoDisplay.backgroundColor}}>
               <Card title="Tech Summary" titleStyle={styles.title}>
               <TechSummary content={index.summary}/>
               </Card>

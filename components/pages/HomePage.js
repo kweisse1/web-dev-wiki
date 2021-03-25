@@ -4,6 +4,7 @@ import {ListItem, SearchBar, Icon} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
 import {ExternalLink} from "../index"
 import * as Animatable from "react-native-animatable"
+import styles from "../../shared/styles"
 
 class HomePage extends Component
 {
@@ -43,11 +44,11 @@ class HomePage extends Component
         <ListItem 
             title={item.title}
             titleStyle={{fontSize: 20, marginLeft:0}}
-            leftAvatar={<Icon name={item.iconInfo.name} type={item.iconInfo.type} color="#5637DD" size={38} iconStyle={{marginRight: 0}}/>}
+            leftAvatar={<Icon name={item.iconInfo.name} type={item.iconInfo.type} color={styles.nav.backgroundColor} size={38} iconStyle={{marginRight: 0}}/>}
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
-                <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button" buttonStyle={{backgroundColor: "#464646", marginRight: 20}} icon={<Icon name="file-text" type="font-awesome" color="#fff" size={20} marginRight={5}/>}/>)
+                <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button"  buttonStyle={{backgroundColor: styles.externalLinkBtn.backgroundColor, marginRight: 20}} icon={<Icon name="file-text" type="font-awesome" color={styles.externalLinkBtn.color} size={20} marginRight={5}/>}/>)
             })}
         >
         </ListItem>
