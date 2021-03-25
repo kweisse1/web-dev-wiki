@@ -2,6 +2,8 @@ import React from "react"
 import {ExternalLink} from "../components/"
 import {FlatList, View} from "react-native"
 import {Icon} from "react-native-elements"
+
+
 //Generates a list  of external links based on the additional resource parameter on the instance of the page class.
 function AdditionalResources(props)
 {

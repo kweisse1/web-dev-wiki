@@ -2,7 +2,6 @@ import React from "react"
 import * as Linking from 'expo-linking';
 import {Text} from "react-native"
 import {Button, Icon} from "react-native-elements"
-import { TextPropTypes } from "react-native";
 
 //takes in four props, url, type, buttonStyle and resourceName. Url is a required prop and tells the link where to point. If the prop type="button" is provided the link will be rendered as a button instead of as text. If the prop type="button" the buttonStyle prop can be used to style the button.ResourceName prop controls the text that is displayed by the link.
 function ExternalLink (props)

@@ -3,8 +3,7 @@ import {FlatList} from 'react-native';
 import {ListItem, SearchBar, Icon} from 'react-native-elements'
 import pagesDisplayArr from "../../shared/data.js"
 import {ExternalLink} from "../index"
-
-
+import * as Animatable from "react-native-animatable"
 
 class HomePage extends Component
 {
@@ -14,7 +13,6 @@ class HomePage extends Component
     this.state={
       searchTerms: ""
     }
-    this.handleInputChange= this.handleInputChange.bind(this)
     this.handleInputChange= this.handleInputChange.bind(this)
   }
 
@@ -41,6 +39,7 @@ class HomePage extends Component
     const renderPageSelection=({item})=>
     {
       return(
+        <Animatable.View animation="fadeInUp">
         <ListItem 
             title={item.title}
             titleStyle={{fontSize: 20, marginLeft:0}}
@@ -52,6 +51,7 @@ class HomePage extends Component
             })}
         >
         </ListItem>
+        </Animatable.View>
       )
     }
    
