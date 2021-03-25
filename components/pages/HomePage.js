@@ -40,14 +40,11 @@ class HomePage extends Component
     const {navigate}= this.props.navigation
     const renderPageSelection=({item})=>
     {
-      const iconData={color: "#5637DD", marginRight:0, size: 38, rounded: false}
-      iconData.name= item.iconInfo.name 
-      iconData.type= item.iconInfo.type
       return(
         <ListItem 
             title={item.title}
             titleStyle={{fontSize: 20, marginLeft:0}}
-            leftAvatar={{icon:iconData}}
+            leftAvatar={<Icon name={item.iconInfo.name} type={item.iconInfo.type} color="#5637DD" size={38} iconStyle={{marginRight: 0}}/>}
             onPress={()=> navigate("InfoDisplayPage",{
               title: item.title, 
               docsButton: ()=> (
