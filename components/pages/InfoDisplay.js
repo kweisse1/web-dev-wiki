@@ -8,7 +8,6 @@ class InfoDisplay extends Component
   {
     super(props)
   }
-    
 
   // sets stack navigator header details, these params are defined and passed in through the homepage component.
   static navigationOptions = ({ navigation }) => ({

@@ -9,11 +9,10 @@ function TechSummary(props)
   {
     const paragraph= `              ${item}`
     return(
-      <View style={{marginVertical: 10}}>
+      
       <Text style={{fontSize: 16}}>
             {paragraph}
       </Text>
-      </View>
     )
   }
   
