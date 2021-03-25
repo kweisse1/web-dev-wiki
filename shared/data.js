@@ -50,7 +50,7 @@ const pageObjectsArr=[];
 new Page("Bootstrap",
 "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
 ["Bootstrap is a CSS framework for developing responsive mobile-first websites. It was released in 2011 by Twitter. While Bootstrap does provide developers with some useful components such as navbars, buttons, cards and carousels, its main claim to fame is its responsive grid system. Bootstrap uses CSS classes to make a websites layout responsive to the size of the viewport."], 
-["CSS"], 
+["CSS","RN Elements"], 
 [{resourceName: "Example Project", url: "https://github.com/RSnodgrass92/captured-creations", icon:{name:"code", type:"font-awesome-5"}},{resourceName: "Tutorial", url: "https://www.youtube.com/watch?v=gqOEoUR5RHg", icon:{name:"video", type:"font-awesome-5"}} ],
 {name:"bootstrap", type:"font-awesome-5"} ).add()
 
@@ -63,7 +63,7 @@ new Page("React","https://reactjs.org/docs/getting-started.html",
 new Page("React Native",
 "https://reactnative.dev/docs/getting-started",
 ["React Native leverages the power of React to create mobile applications. While very similar in structure to React, React Native utilizes a different set of components.","One major benefit to writing applications in this way is that the codebase can be written once and run on both the iOS and Android platforms. React does this by mapping JavaScript to native code. While this method of app development has its advantages, it does come with its downsides as well. Native apps will have better performance than those written in React Native."],
-["React","React Navigation", "React Redux"],
+["React","React Navigation", "React Redux", "RN Elements"],
 [{resourceName: "Example Project", url: "https://github.com/kweisse1/web-dev-wiki", icon:{name:"code", type:"font-awesome-5"}},{resourceName:"Tutorial", url: "https://www.youtube.com/watch?v=0-S5a0eXPoc", icon: {name: "video", type: "font-awesome-5"}}], 
 {name: "react", type:"fontisto"}).add()
 
@@ -113,6 +113,20 @@ new Page("CSS",
  ["Sass","HTML","Bootstrap"],
  [{resourceName: "Example Project", url: "https://github.com/RSnodgrass92/NucampSite", icon:{name:"code", type:"font-awesome-5"}},{resourceName:"Tutorial", url: "https://www.youtube.com/watch?v=1PnVor36_40", icon: {name: "video", type: "font-awesome-5"}},{resourceName:"W3 Schools", url: "https://www.w3schools.com/css/default.asp", icon: {name: "file-text", type: "font-awesome"}}],
   {name: "css3", type:"fontisto"} ).add()
+
+ new Page("Visual Studio Code",
+ "https://code.visualstudio.com/docs",
+ ["Visual Studio Code is a code editor developed by Microsoft and released in 2015. Visual Studio Code code offers developers powerful tools to streamline their workflow. These features include but are not limited to Emmet abbreviations, IntelliSense and an integrated terminal. Additionally, Visual Studio code provides support for version control. Visual Studio Code can also be tailored to a developers liking through one of the many community developed extensions available. "], 
+ undefined,
+ [{resourceName:"Best Extensions", url: "https://x-team.com/blog/best-vscode-extensions/", icon: {name: "file-text", type: "font-awesome"}}, {resourceName:"Mac Shortcuts", url: "https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf?WT.mc_id=code-online-jopapa", icon: {name: "file-text", type: "font-awesome"}},{resourceName:"PC Shortcuts", url: "https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf", icon: {name: "file-text", type: "font-awesome"}}],
+  {name: "visual-studio", type:"fontisto"} ).add()
+
+  new Page("RN Elements",
+ "https://reactnativeelements.com/docs",
+ ["React Native Elements is a JavaScript library that contains several styled components designed to be used with React Native. React Native Elements has a similar relationship to React Native that Bootstrap has with HTML. The UI components make it easier for React Native developers to get an application up and running much faster."], 
+ ["React Native","Bootstrap"],
+ [{resourceName: "Example Project", url: "https://github.com/kweisse1/web-dev-wiki", icon:{name:"code", type:"font-awesome-5"}},{resourceName:"Tutorial", url: "https://www.youtube.com/watch?v=kFz-CY2Wv0o", icon: {name: "video", type: "font-awesome-5"}}],
+{name: "react", type:"fontisto"} ).add()
 
 //Defines the look of the pages NEEDS major edits
 const pagesViewArr= pageObjectsArr.map(index => 
