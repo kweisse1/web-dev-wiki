@@ -1,5 +1,12 @@
 import {Component} from "react"
 import pagesDisplayArr from "../../shared/data.js"
+import {connect} from "react-redux"
+
+const mapStateToProps= (state) => {
+  return {
+   article: state.article,
+  }
+}
 
 //every wiki-info page should  be displayed via this component
 class InfoDisplay extends Component
@@ -19,9 +26,9 @@ class InfoDisplay extends Component
   {
     return(
       // The look and content of the page is defined in shared/data.js
-      pagesDisplayArr.filter(index => index.title===this.props.navigation.state.params.title)[0].view
+      pagesDisplayArr.filter(index => index.title===this.props.article)[0].view
     )
   }
 }
 
-export default InfoDisplay
+export default  connect(mapStateToProps)(InfoDisplay)
