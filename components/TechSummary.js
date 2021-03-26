@@ -1,5 +1,6 @@
 import React from "react"
-import {FlatList, View, Text} from "react-native"
+import {FlatList, Text} from "react-native"
+import * as Animatable from "react-native-animatable"
 
 
 //generates info based on the array passed in as a content prop this can be edited to take in an array of objects to include images as well but has not yet been implemented.

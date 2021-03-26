@@ -5,6 +5,15 @@ import pageDisplayArr from "../shared/data.js"
 import {ExternalLink} from "./index"
 import {Button, Icon} from "react-native-elements"
 import styles from "../shared/styles"
+import {connect} from "react-redux"
+import {setArticle} from "../redux/actions/actionCreators/";
+
+const mapDispatchToProps= ()=> {
+  return {
+     setArticle: setArticle,
+  }
+ }
+
 
 //Internal link component takes in three props, techName, buttonStyle and type, only techName is required, if the prop type="button" is provided the link will be in a button instead of as text. If the prop type is button it can be styled with the buttonStyle prop.The techName prop tells the stackNavigator which wiki article to link to by article title.
 class InternalLink extends Component 
@@ -23,11 +32,15 @@ class InternalLink extends Component
         title={selectedTech.title}
         titleStyle={{color: styles.nav.color}}
         icon={<Icon name={selectedTech.iconInfo.name} type={selectedTech.iconInfo.type} color={styles.nav.color} size={20} marginRight={5} />}
-        onPress={()=> navigate("InfoDisplayPage",{
+        onPress={()=> {
+          this.props.setArticle(selectedTech.title)
+          navigate("InfoDisplayPage",{
             title: selectedTech.title, 
             docsButton: ()=> (
               <ExternalLink  icon={<Icon name="file-text" type="font-awesome" size={20} marginRight={5} color={styles.externalLinkBtn.color}/>} type="button" resourceName="View Docs" url={selectedTech.documentationLink} buttonStyle={{backgroundColor: styles.externalLinkBtn.backgroundColor, marginRight: 20}}/>)
-          })}
+          })
+        }
+          }
       />
     )
 
@@ -45,4 +58,4 @@ class InternalLink extends Component
 
 // withNavigation returns a component that wraps InternalLink and passes in the
 // navigation prop
-export default withNavigation(InternalLink);
+export default withNavigation(connect(undefined,mapDispatchToProps())(InternalLink));

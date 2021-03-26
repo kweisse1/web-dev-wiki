@@ -5,6 +5,14 @@ import pagesDisplayArr from "../../shared/data.js"
 import {ExternalLink} from "../index"
 import * as Animatable from "react-native-animatable"
 import styles from "../../shared/styles"
+import {connect} from "react-redux"
+import {setArticle} from "../../redux/actions/actionCreators";
+
+const mapDispatchToProps= ()=> {
+  return {
+     setArticle: setArticle,
+  }
+ }
 
 class HomePage extends Component
 {
@@ -45,11 +53,14 @@ class HomePage extends Component
             title={item.title}
             titleStyle={{fontSize: 20, marginLeft:0}}
             leftAvatar={<Icon name={item.iconInfo.name} type={item.iconInfo.type} color={styles.nav.backgroundColor} size={38} iconStyle={{marginRight: 0}}/>}
-            onPress={()=> navigate("InfoDisplayPage",{
-              title: item.title, 
-              docsButton: ()=> (
-                <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button"  buttonStyle={{backgroundColor: styles.externalLinkBtn.backgroundColor, marginRight: 20}} icon={<Icon name="file-text" type="font-awesome" color={styles.externalLinkBtn.color} size={20} marginRight={5}/>}/>)
-            })}
+            onPress={()=> {
+              this.props.setArticle(item.title)
+              navigate("InfoDisplayPage",{
+                title: item.title, 
+                docsButton: ()=> (
+                  <ExternalLink url={item.documentationLink} resourceName="View Docs" type="button"  buttonStyle={{backgroundColor: styles.externalLinkBtn.backgroundColor, marginRight: 20}} icon={<Icon name="file-text" type="font-awesome" color={styles.externalLinkBtn.color} size={20} marginRight={5}/>}/>)
+              })
+            } }
         >
         </ListItem>
         </Animatable.View>
@@ -75,4 +86,4 @@ class HomePage extends Component
   }
 }
 
-export default HomePage
+export default connect(undefined,mapDispatchToProps())(HomePage)
